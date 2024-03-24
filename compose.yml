@@ -1,0 +1,28 @@
+version: "3"
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  nuxt:
+    build:
+      context: .
+    restart: unless-stopped
+    networks:
+      - app-tier
+
+  nginx:
+    image: nginx:1.25.4-alpine
+    restart: unless-stopped
+    environment:
+      - SERVER_NAME=${NGINX_SERVER_NAME:-localhost}
+    ports:
+      - "80:8080"
+      - "443:8443"
+    volumes:
+      - ./nginx/conf:/etc/nginx/conf.d
+    depends_on:
+      - nuxt
+    networks:
+      - app-tier
