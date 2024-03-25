@@ -1,13 +1,15 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Simple Docker config
+
+> Simple Nuxt 3 Docker config with PM2, Nginx, and pnpm
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Features
 
-- [x] 🐳 Docker
-- [x] ❤️ pm2
-- [x] 📱 Nginx
-- [x] ✨ pnpm
+- [x] 🐳 Docker - https://www.docker.com/
+- [x] ❤️ PM2 - a daemon process manager https://pm2.keymetrics.io/
+- [x] 📱 Nginx - https://www.nginx.com/
+- [x] ✨ pnpm - Fast, disk space efficient package manager. https://pnpm.io/
 
 ## Setup
 
