@@ -28,7 +28,7 @@ ENV PORT=$PORT
 
 COPY --from=builder /app/.output /app/.output
 # Optional, only needed if you rely on unbundled dependencies
-# COPY --from=build /app/node_modules /app/node_modules
+# COPY --from=builder /app/node_modules /app/node_modules
 
 COPY --from=builder /app/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 
