@@ -15,7 +15,7 @@ RUN npm install -g pnpm
 COPY --link package.json .
 COPY --link pnpm-lock.yaml .
 
-RUN pnpm install
+RUN pnpm install --production=false
 
 COPY --link . .
 
